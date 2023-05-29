@@ -5,7 +5,7 @@ class BankAccount:
         self.name = name
         self.last_name = last_name
         self.__accont_number = input('Номер счета: ')
-        self.__balance = int(input('Начальный депозит: '))
+        self.__balance = float(input('Начальный депозит: '))
     def info (self):
         print(
             f'Имя:{self.name},'
