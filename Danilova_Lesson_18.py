@@ -4,8 +4,8 @@ class BankAccount:
     def __init__(self, name = default_name, last_name = default_last_name):
         self.name = name
         self.last_name = last_name
-        self.__accont_number = '123456789'
-        self.__balance = 1000
+        self.__accont_number = input('Номер счета: ')
+        self.__balance = int(input('Начальный депозит: '))
     def info (self):
         print(
             f'Имя:{self.name},'
