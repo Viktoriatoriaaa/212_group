@@ -17,6 +17,7 @@
 # conn.commit()
 # cursor.execute('''UPDATE my_table1 SET text1 = 'hello1', text2 = 'world1' WHERE id = ?''', (k[1][0],))
 # conn.commit()
+# conn.close()
 
 # Задача 2:
 # cursor.execute('''SELECT * FROM my_table1''')
@@ -50,7 +51,6 @@ for i in my_list:
     if str(i).isalpha():
         cursor.execute('''INSERT INTO my_table2(text) VALUES(?)''', (i,))
         conn.commit()
-        i.split(',')
         p = len(i)
         cursor1.execute('''INSERT INTO my_table3(digit) VALUES(?)''', (p,))
         conn1.commit()
@@ -74,11 +74,4 @@ if len(y) > 5:
 elif len(y) < 5:
     cursor.execute('''UPDATE my_table2 SET text = 'hello' WHERE id = ?''', (x[0][0],))
     conn.commit()
-
-
-
-
-
-
-
-
+# conn.close()
